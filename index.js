@@ -220,6 +220,10 @@ client.on('message', (message) => {
     commandList.forEach(x => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
     });
+
+    embed.addField('CH 꿀값', commandStr);
+
+    message.channel.send(embed)
   }
   if(message.content.startsWith('!전체공지1')) {
     if(checkPermission(message)) return
