@@ -179,6 +179,16 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   }
+  if(message.content === 'ch!맥크리 ')
+    const exampleEmbed = new Discord.MessageEmbed()   
+	  .setColor('#0099ff')
+	  .setAuthor('CH BOT', 'https://cdn.discordapp.com/avatars/689875040350502957/e3353b1ee3dad0869a95042ef0662b8d.png?size=2048')
+	  .setDescription('Some description here')
+	  .setImage('https://media.discordapp.net/attachments/680260392697724943/742365462847029248/unknown.png?width=701&height=598')
+	  .setTimestamp()
+	  .setFooter('크힛 아리님 맥크리 값입니다..', 'https://cdn.discordapp.com/avatars/689875040350502957/e3353b1ee3dad0869a95042ef0662b8d.png?size=2048');
+
+    channel.send(exampleEmbed);
 
   if(message.content == 'k!톰 칸토 목록') {
     let helpImg = 'https://media.discordapp.net/attachments/742289369582403595/742544272678453398/3300d97f9203065a.gif';
