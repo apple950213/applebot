@@ -208,7 +208,6 @@ client.on('message', (message) => {
     let commandList = [
       {name: ' ', desc: ' '},
     ];
-    
     let commandStr = '';
     let embed = new Discord.RichEmbed()
       .setAuthor('CH 아리님 맥크리 값', helpImg)
