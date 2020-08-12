@@ -129,7 +129,7 @@ client.on('message', (message) => {
   if(message.content === 'k!요요 바스티온') {
     message.reply('UAS6AS  ( 좌클릭 값 ) KEY 마우스 보조키  정확도 증가');
   }
-  if(message.content === 'k!톰 칸토ㅋ') {
+  if(message.content === 'k!톰 목록') {
     message.reply('```DIFF\n+ 겐지 좌,우 / 리퍼 좌 / 맥 좌\n```\n```DIFF\n- 맥크리 좌 / 메이 우 / 바스 좌\n```\n```MD\n# 솔저 좌,우 / 시메 좌, 시메트라 좌\n```\n```CS\n# 애쉬 좌 / 에코 좌,우 / 정크 좌\n```\n```FIX\n# 트레 좌,궁 / 트레이서 좌,궁 / 파라 좌 / 한조 좌 \n```');
   }
 
@@ -179,17 +179,6 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   }
-  if(message.content === 'ch!맥크리 ')  {
-    const exampleEmbed = new Discord.MessageEmbed()   
-	  .setColor('#0099ff')
-	  .setAuthor('CH BOT', 'https://cdn.discordapp.com/avatars/689875040350502957/e3353b1ee3dad0869a95042ef0662b8d.png?size=2048')
-	  .setDescription('Some description here')
-	  .setImage('https://media.discordapp.net/attachments/680260392697724943/742365462847029248/unknown.png?width=701&height=598')
-	  .setTimestamp()
-	  .setFooter('크힛 아리님 맥크리 값입니다..', 'https://cdn.discordapp.com/avatars/689875040350502957/e3353b1ee3dad0869a95042ef0662b8d.png?size=2048');
-
-    channel.send(exampleEmbed);
-  }
   if(message.content == 'k!톰 칸토 목록') {
     let helpImg = 'https://media.discordapp.net/attachments/742289369582403595/742544272678453398/3300d97f9203065a.gif';
     let commandList = [
@@ -202,7 +191,7 @@ client.on('message', (message) => {
     let commandStr = '';
     let embed = new Discord.RichEmbed()
       .setAuthor('TOM KANTO LIST', helpImg)
-      .setColor()
+      .setColor('#0099ff')
       .setFooter(`KANTO BOT`)
       .setTimestamp()
     
@@ -210,11 +199,28 @@ client.on('message', (message) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
     });
 
-    embed.addField('Commands: ', commandStr);
+    embed.addField('칸토값 목록', commandStr);
 
     message.channel.send(embed)
   }
-
+  if(message.content == 'ch!맥크리') {
+    let helpImg = 'https://cdn.discordapp.com/avatars/689875040350502957/e3353b1ee3dad0869a95042ef0662b8d.png?size=2048';
+    let commandList = [
+      {name: ' ', desc: ' '},
+    ];
+    
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('CH 아리님 맥크리 값', helpImg)
+      .setColor('#e8505b')
+      .setFooter(`CH BOT`)
+      .setTimestamp()
+      .setThumbnai('https://media.discordapp.net/attachments/680260392697724943/742365462847029248/unknown.png?width=701&height=598')
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+  }
   if(message.content.startsWith('!전체공지1')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
