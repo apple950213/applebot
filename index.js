@@ -182,7 +182,7 @@ client.on('message', (message) => {
   if(message.content == 'k!톰 칸토 목록') {
     let helpImg = 'https://media.discordapp.net/attachments/742289369582403595/742544272678453398/3300d97f9203065a.gif';
     let commandList = [
-      {name: '1 page', desc: '```diff\n+ 겐지 좌,우 / 리퍼 좌 / 맥 좌톰```'},
+      {name: '1 page', desc: '```diff\n+ 겐지 좌,우 / 리퍼 좌 / 맥 좌```'},
       {name: '2 page', desc: '```diff\n- 맥크리 좌 / 메이 우 / 바스 좌```'},
       {name: '3 page', desc: '```md\n# 솔저 좌,우 / 시메 좌, 시메트라 좌```'},
       {name: '4 page', desc: '```cs\n# 애쉬 좌 / 에코 좌,우 / 정크 좌```'},
